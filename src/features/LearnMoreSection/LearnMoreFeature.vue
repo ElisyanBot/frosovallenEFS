@@ -38,61 +38,61 @@
 </template>
 
 <script setup>
-import MainWidthLayout from '../../layouts/MainWidthLayout.vue'
-import InfoIcon from './components/InfoIcon.vue'
-import InfoText from './components/InfoText.vue'
-import InfoTextLayout from './components/InfoTextLayout.vue'
-import { ref } from 'vue'
+  import MainWidthLayout from '../../layouts/MainWidthLayout.vue'
+  import InfoIcon from './components/InfoIcon.vue'
+  import InfoText from './components/InfoText.vue'
+  import InfoTextLayout from './components/InfoTextLayout.vue'
+  import { ref } from 'vue'
 
-const currentInfoObj = ref('cafe')
+  const currentInfoObj = ref('cafe')
 
-const mockData = ref({
-  cafe: [
-    {
-      headerTxt: 'öppet',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    },
-    {
-      headerTxt: 'hitta hit',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    }
-  ],
-  vandrarhem: [
-    {
-      headerTxt: 'kontakt',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    },
-    {
-      headerTxt: 'hitta hit',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    }
-  ],
-  event: [
-    {
-      headerTxt: 'om oss',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    },
-    {
-      headerTxt: 'hitta hit',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    }
-  ],
-  gudstjänster: [
-    {
-      headerTxt: 'söndagar',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    },
-    {
-      headerTxt: 'hitta hit',
-      infoTxt: "detta är ett test <a href='#'>länk</a>"
-    }
-  ]
-})
+  const mockData = ref({
+    cafe: [
+      {
+        headerTxt: 'öppet',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      },
+      {
+        headerTxt: 'hitta hit',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      }
+    ],
+    vandrarhem: [
+      {
+        headerTxt: 'kontakt',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      },
+      {
+        headerTxt: 'hitta hit',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      }
+    ],
+    event: [
+      {
+        headerTxt: 'om oss',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      },
+      {
+        headerTxt: 'hitta hit',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      }
+    ],
+    gudstjänster: [
+      {
+        headerTxt: 'söndagar',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      },
+      {
+        headerTxt: 'hitta hit',
+        infoTxt: "detta är ett test <a href='#'>länk</a>"
+      }
+    ]
+  })
 </script>
 
 <style lang="scss">
-.icon__container {
-  display: flex;
-  justify-content: space-between;
-}
+  .icon__container {
+    display: flex;
+    justify-content: space-between;
+  }
 </style>

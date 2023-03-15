@@ -6,50 +6,50 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+  import { defineProps } from 'vue'
 
-defineProps({
-  headerTxt: {
-    type: String,
-    required: true
-  },
-  infoTxt: {
-    type: String,
-    required: true
-  }
-})
+  defineProps({
+    headerTxt: {
+      type: String,
+      required: true
+    },
+    infoTxt: {
+      type: String,
+      required: true
+    }
+  })
 </script>
 
 <style lang="scss">
-.info-text__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 8rem;
-
-  h4 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    color: #1c4e46;
-  }
-
-  span {
+  .info-text__container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    font-size: 2.6rem;
-    text-transform: uppercase;
-    color: #5e6963;
-    height: inherit;
+    width: 100%;
+    height: 8rem;
 
-    a {
-      color: #4791a8;
-      &::before {
-        content: '|';
-        margin: 0 1rem;
+    h4 {
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      color: #1c4e46;
+    }
+
+    span {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 2.6rem;
+      text-transform: uppercase;
+      color: #5e6963;
+      height: inherit;
+
+      a {
+        color: #4791a8;
+        &::before {
+          content: '|';
+          margin: 0 1rem;
+        }
       }
     }
   }
-}
 </style>

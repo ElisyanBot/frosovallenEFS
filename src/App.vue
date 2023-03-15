@@ -7,5 +7,5 @@
 </template>
 
 <script setup>
-import LearnMoreFeature from './features/LearnMoreSection/LearnMoreFeature.vue'
+  import LearnMoreFeature from './features/LearnMoreSection/LearnMoreFeature.vue'
 </script>

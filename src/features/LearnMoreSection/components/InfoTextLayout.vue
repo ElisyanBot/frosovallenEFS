@@ -5,9 +5,9 @@
 </template>
 
 <style lang="scss">
-.info-text__layout {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+  .info-text__layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 </style>

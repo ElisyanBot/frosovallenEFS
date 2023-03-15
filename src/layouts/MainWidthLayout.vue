@@ -5,12 +5,12 @@
 </template>
 
 <style lang="scss">
-.layout__main-width {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+  .layout__main-width {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 
-  width: 100%;
-  max-width: 130rem;
-}
+    width: 100%;
+    max-width: 130rem;
+  }
 </style>
