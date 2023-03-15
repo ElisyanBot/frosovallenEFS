@@ -2,20 +2,21 @@
   <section class="food-table">
     <MainWidthLayout>
       <div class="food-table__categories">
-        <TableCategory text="varm mat"/>
-        <TableCategory text="kall mat"/>
-        <TableCategory text="fika"/>
-        <TableCategory text="dryck"/>
+        <TableCategory text="varm mat" />
+        <TableCategory text="kall mat" />
+        <TableCategory text="fika" />
+        <TableCategory text="dryck" />
       </div>
     </MainWidthLayout>
     <MainWidthLayout>
-      <div 
+      <div
         :class="{
           'food-table__items': true,
-          'food-table__items--expanded': expandedSection}"
+          'food-table__items--expanded': expandedSection
+        }"
       >
-        <div class="food-table__divider" :style='{"grid-row-end": "span " + `${rowsNr}` }'></div>
-        <FoodItem 
+        <div class="food-table__divider" :style="{ 'grid-row-end': 'span ' + `${rowsNr}` }"></div>
+        <FoodItem
           v-for="(item, index) in foodItems"
           :key="index"
           :header-txt="item.headerTxt"
@@ -34,89 +35,89 @@
 </template>
 
 <script setup>
-  import MainWidthLayout from '../../layouts/MainWidthLayout.vue';
-  import TableCategory from './components/TableCategory.vue';
-  import FoodItem from './components/FoodItem.vue';
-  import { ref, watchEffect } from 'vue';
+  import MainWidthLayout from '../../layouts/MainWidthLayout.vue'
+  import TableCategory from './components/TableCategory.vue'
+  import FoodItem from './components/FoodItem.vue'
+  import { ref, watchEffect } from 'vue'
 
-  const rowsNr = ref(1);
-  const expandedSection = ref(false);
-  const btnTxt = ref('visa mer');
+  const rowsNr = ref(1)
+  const expandedSection = ref(false)
+  const btnTxt = ref('visa mer')
   const foodItems = ref([
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: false,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: false,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: true,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: true,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: false,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: false,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: false,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: true,
-      imgSrc: "./FrosovallenHus.png"
+      imgSrc: './FrosovallenHus.png'
     },
     {
-      headerTxt: "Food item",
-      text: "Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för",
+      headerTxt: 'Food item',
+      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
       outOfStock: false,
-      imgSrc: "./FrosovallenHus.png"
-    },
+      imgSrc: './FrosovallenHus.png'
+    }
   ])
-  
+
   watchEffect(() => {
-    rowsNr.value =  Math.ceil(foodItems.value.length / 2);
+    rowsNr.value = Math.ceil(foodItems.value.length / 2)
   })
 
   const handleClick = () => {
-    expandedSection.value = !expandedSection.value;
+    expandedSection.value = !expandedSection.value
 
-    if(expandedSection.value) {
-      btnTxt.value = "visa mindre";
+    if (expandedSection.value) {
+      btnTxt.value = 'visa mindre'
     } else {
-      btnTxt.value = "visa mer"
+      btnTxt.value = 'visa mer'
     }
   }
 </script>
 
 <style lang="scss">
   .food-table {
-    background-color: #BDBBA4;
+    background-color: #bdbba4;
     padding-bottom: 7rem;
     position: relative;
   }
@@ -138,17 +139,16 @@
     overflow: hidden;
     animation: shrink-animation 0.5s ease-out;
 
-
     .food-table__divider {
       content: ' ';
       overflow: hidden;
       padding-bottom: 1rem;
       border-right: 3px dashed #f8f8f8da;
-      
+
       justify-self: center;
       grid-column-start: span divider;
       grid-column-end: second;
-      grid-row: 1/last-line;      
+      grid-row: 1 / last-line;
     }
   }
 
@@ -165,9 +165,9 @@
     margin-top: 6rem;
 
     button {
-      background-color: #7D9A89;;
+      background-color: #7d9a89;
       border: none;
-      color: #Ffffff;
+      color: #ffffff;
       font-weight: bold;
       font-size: 2rem;
       text-transform: uppercase;

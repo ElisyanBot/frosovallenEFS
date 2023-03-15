@@ -1,12 +1,10 @@
 <template>
-  <div :class="{'food-item': true, 'food-item--disabled': outOfStock}">
+  <div :class="{ 'food-item': true, 'food-item--disabled': outOfStock }">
     <picture>
       <div v-if="outOfStock" class="food-item__picture--disabled">
-        <p>
-          slutsåld
-        </p>
+        <p>slutsåld</p>
       </div>
-      <img :src="imgSrc" alt="food item picture">
+      <img :src="imgSrc" alt="food item picture" />
     </picture>
     <div class="food-item__text-block">
       <h5>
@@ -15,21 +13,21 @@
       <p>
         {{ text }}
       </p>
-    </div>    
+    </div>
   </div>
 </template>
 
 <script setup>
-  import { defineProps } from 'vue';
+  import { defineProps } from 'vue'
 
   defineProps({
     imgSrc: {
       type: String,
-      required: true,
+      required: true
     },
     headerTxt: {
       type: String,
-      required: true,
+      required: true
     },
     text: {
       type: String,
@@ -72,7 +70,7 @@
     gap: 1.2rem;
 
     h5 {
-      color: #5A7D69;
+      color: #5a7d69;
       font-size: 2.2rem;
       font-weight: bold;
       text-transform: uppercase;
@@ -94,7 +92,7 @@
     }
   }
 
-  .food-item__picture--disabled { 
+  .food-item__picture--disabled {
     background-color: rgba(47, 47, 47, 0.83);
     display: flex;
     justify-content: center;
@@ -105,12 +103,12 @@
     p {
       display: block;
       padding: 1rem;
-      color: #C64533;
+      color: #c64533;
       font-weight: bold;
       font-size: 1.8rem;
       text-align: center;
       text-transform: uppercase;
-      border: 3px dashed #C64533;
+      border: 3px dashed #c64533;
       border-radius: 0.5rem;
     }
   }
