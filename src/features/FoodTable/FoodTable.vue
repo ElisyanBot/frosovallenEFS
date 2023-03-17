@@ -2,10 +2,10 @@
   <section class="food-table">
     <MainWidthLayout>
       <div class="food-table__categories">
-        <TableCategory text="varm mat" />
-        <TableCategory text="kall mat" />
-        <TableCategory text="fika" />
-        <TableCategory text="dryck" />
+        <TableCategory text="varm mat" @handle-click="showWarmFood"/>
+        <TableCategory text="kall mat" @handle-click="showColdFood"/>
+        <TableCategory text="fika" @handle-click="showDesserts"/>
+        <TableCategory text="dryck" @handle-click="showDrinks"/>
       </div>
     </MainWidthLayout>
     <MainWidthLayout>
@@ -27,7 +27,7 @@
       </div>
     </MainWidthLayout>
     <div class="food-table__btn-container">
-      <button @click="handleClick">
+      <button v-if="foodItems.length >= 4" @click="handleClick">
         {{ btnTxt }}
       </button>
     </div>
@@ -39,66 +39,12 @@
   import TableCategory from './components/TableCategory.vue'
   import FoodItem from './components/FoodItem.vue'
   import { ref, watchEffect } from 'vue'
+  import {warmFood, coldFood, desserts, drinks } from '../../../public/_MenuItems.js'
 
   const rowsNr = ref(1)
   const expandedSection = ref(false)
   const btnTxt = ref('visa mer')
-  const foodItems = ref([
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: false,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: false,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: true,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: true,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: false,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: false,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: false,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: true,
-      imgSrc: './FrosovallenHus.png'
-    },
-    {
-      headerTxt: 'Food item',
-      text: 'Beskrivning av detta föremålet, kanske innehållet eller likande.det beror ju lite på vad man känner för',
-      outOfStock: false,
-      imgSrc: './FrosovallenHus.png'
-    }
-  ])
+  const foodItems = ref(warmFood);
 
   watchEffect(() => {
     rowsNr.value = Math.ceil(foodItems.value.length / 2)
@@ -112,6 +58,22 @@
     } else {
       btnTxt.value = 'visa mer'
     }
+  }
+
+  const showWarmFood = () => {
+    foodItems.value = warmFood;
+  }
+
+  const showColdFood = () => {
+    foodItems.value = coldFood;
+  }
+
+  const showDesserts = () => {
+    foodItems.value = desserts;
+  }
+
+  const showDrinks = () => {
+    foodItems.value = drinks;
   }
 </script>
 
