@@ -2,10 +2,10 @@
   <section class="food-table">
     <MainWidthLayout>
       <div class="food-table__categories">
-        <TableCategory text="varm mat" @handle-click="showWarmFood"/>
-        <TableCategory text="kall mat" @handle-click="showColdFood"/>
-        <TableCategory text="fika" @handle-click="showDesserts"/>
-        <TableCategory text="dryck" @handle-click="showDrinks"/>
+        <TableCategory text="varm mat" @handle-click="showWarmFood" />
+        <TableCategory text="kall mat" @handle-click="showColdFood" />
+        <TableCategory text="fika" @handle-click="showDesserts" />
+        <TableCategory text="dryck" @handle-click="showDrinks" />
       </div>
     </MainWidthLayout>
     <MainWidthLayout>
@@ -39,12 +39,12 @@
   import TableCategory from './components/TableCategory.vue'
   import FoodItem from './components/FoodItem.vue'
   import { ref, watchEffect } from 'vue'
-  import {warmFood, coldFood, desserts, drinks } from '../../../public/_MenuItems.js'
+  import { warmFood, coldFood, desserts, drinks } from '../../../public/_MenuItems.js'
 
   const rowsNr = ref(1)
   const expandedSection = ref(false)
   const btnTxt = ref('visa mer')
-  const foodItems = ref(warmFood);
+  const foodItems = ref(warmFood)
 
   watchEffect(() => {
     rowsNr.value = Math.ceil(foodItems.value.length / 2)
@@ -61,19 +61,19 @@
   }
 
   const showWarmFood = () => {
-    foodItems.value = warmFood;
+    foodItems.value = warmFood
   }
 
   const showColdFood = () => {
-    foodItems.value = coldFood;
+    foodItems.value = coldFood
   }
 
   const showDesserts = () => {
-    foodItems.value = desserts;
+    foodItems.value = desserts
   }
 
   const showDrinks = () => {
-    foodItems.value = drinks;
+    foodItems.value = drinks
   }
 </script>
 
