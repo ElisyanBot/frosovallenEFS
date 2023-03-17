@@ -11,7 +11,7 @@
 <script setup>
   import LearnMoreFeature from './features/LearnMoreSection/LearnMoreFeature.vue'
   import FoodTable from './features/FoodTable/FoodTable.vue'
-  import AboutUs from './components/AboutUs.vue';
+  import AboutUs from './components/AboutUs.vue'
 </script>
 
 <style lang="scss">
