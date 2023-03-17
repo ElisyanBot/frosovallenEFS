@@ -43,7 +43,7 @@
   import InfoText from './components/InfoText.vue'
   import InfoTextLayout from './components/InfoTextLayout.vue'
   import { ref } from 'vue'
-import infoTextObj from '../../../public/_infoTextObj'
+  import infoTextObj from '../../../public/_infoTextObj'
 
   const currentInfoObj = ref('cafe')
 

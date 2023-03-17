@@ -1,9 +1,9 @@
 <template>
   <section class="food-table">
     <picture id="food-table__img-header">
-      <source media="(min-width:650px)" srcset="../../../public/food-table/imgHeaderDesktop.png">
-      <source media="(min-width:465px)" srcset="../../../public/food-table/imgHeaderMobile.png">
-      <img src="../../../public/food-table/imgHeaderDesktop.png" alt="berg">
+      <source media="(min-width:650px)" srcset="../../../public/food-table/imgHeaderDesktop.png" />
+      <source media="(min-width:465px)" srcset="../../../public/food-table/imgHeaderMobile.png" />
+      <img src="../../../public/food-table/imgHeaderDesktop.png" alt="berg" />
     </picture>
     <MainWidthLayout>
       <div class="food-table__categories">

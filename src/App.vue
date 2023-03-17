@@ -5,9 +5,7 @@
     <LearnMoreFeature />
     <FoodTable />
   </main>
-  <footer>
-
-  </footer>
+  <footer></footer>
 </template>
 
 <script setup>
@@ -17,7 +15,7 @@
 
 <style lang="scss">
   footer {
-    background-color: #F37563;
+    background-color: #f37563;
     width: 100%;
     height: 30rem;
   }
