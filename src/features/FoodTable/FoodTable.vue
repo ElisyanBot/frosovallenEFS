@@ -1,5 +1,10 @@
 <template>
   <section class="food-table">
+    <picture id="food-table__img-header">
+      <source media="(min-width:650px)" srcset="../../../public/food-table/imgHeaderDesktop.png">
+      <source media="(min-width:465px)" srcset="../../../public/food-table/imgHeaderMobile.png">
+      <img src="../../../public/food-table/imgHeaderDesktop.png" alt="berg">
+    </picture>
     <MainWidthLayout>
       <div class="food-table__categories">
         <TableCategory text="varm mat" @handle-click="showWarmFood" />
@@ -78,6 +83,14 @@
 </script>
 
 <style lang="scss">
+  #food-table__img-header {
+    img {
+      width: 100%;
+      background-color: #f2f2f2;
+      padding-top: 15rem;
+    }
+  }
+
   .food-table {
     background-color: #bdbba4;
     padding-bottom: 7rem;

@@ -43,51 +43,11 @@
   import InfoText from './components/InfoText.vue'
   import InfoTextLayout from './components/InfoTextLayout.vue'
   import { ref } from 'vue'
+import infoTextObj from '../../../public/_infoTextObj'
 
   const currentInfoObj = ref('cafe')
 
-  const mockData = ref({
-    cafe: [
-      {
-        headerTxt: 'öppet',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      },
-      {
-        headerTxt: 'hitta hit',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      }
-    ],
-    vandrarhem: [
-      {
-        headerTxt: 'kontakt',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      },
-      {
-        headerTxt: 'hitta hit',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      }
-    ],
-    event: [
-      {
-        headerTxt: 'om oss',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      },
-      {
-        headerTxt: 'hitta hit',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      }
-    ],
-    gudstjänster: [
-      {
-        headerTxt: 'söndagar',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      },
-      {
-        headerTxt: 'hitta hit',
-        infoTxt: "detta är ett test <a href='#'>länk</a>"
-      }
-    ]
-  })
+  const mockData = ref(infoTextObj)
 </script>
 
 <style lang="scss">
