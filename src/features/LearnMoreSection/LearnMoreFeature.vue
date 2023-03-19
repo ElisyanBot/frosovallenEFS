@@ -2,28 +2,28 @@
   <MainWidthLayout>
     <div class="icon__container">
       <InfoIcon
-        bg-src="./FrosovallenHus.png"
+        bg-src="./learn-more__cafe-img.png"
         text="cafe"
-        icon-class="church"
+        icon-class="utensils"
         @handle-click="() => (currentInfoObj = 'cafe')"
       />
 
       <InfoIcon
-        bg-src="./FrosovallenHus.png"
+        bg-src="./learn-more__vandrarhem-img.png"
         text="vandrarhem"
-        icon-class="church"
+        icon-class="house"
         @handle-click="() => (currentInfoObj = 'vandrarhem')"
       />
 
       <InfoIcon
-        bg-src="./FrosovallenHus.png"
+        bg-src="./learn-more__event-img.png"
         text="event"
-        icon-class="church"
+        icon-class="calendar"
         @handle-click="() => (currentInfoObj = 'event')"
       />
 
       <InfoIcon
-        bg-src="./FrosovallenHus.png"
+        bg-src="./learn-more__gudstjänst-img.png"
         text="gudstjänst"
         icon-class="church"
         @handle-click="() => (currentInfoObj = 'gudstjänster')"
