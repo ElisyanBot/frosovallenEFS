@@ -31,6 +31,12 @@
     </div>
     <div class="info-text__line-animation">
       <img src="/line-green.svg" alt="animation" />
+      <img
+        :style="{ left: arrowPlacement + '%' }"
+        class="line-green__arrow"
+        src="/line-green__arrow.svg"
+        alt="animation"
+      />
     </div>
     <InfoTextLayout>
       <InfoText
@@ -48,12 +54,27 @@
   import InfoIcon from './components/InfoIcon.vue'
   import InfoText from './components/InfoText.vue'
   import InfoTextLayout from './components/InfoTextLayout.vue'
-  import { ref } from 'vue'
+  import { ref, watchEffect } from 'vue'
   import infoTextObj from '../../../public/_infoTextObj'
 
   const currentInfoObj = ref('cafe')
-
   const mockData = ref(infoTextObj)
+  const arrowPlacement = ref(null)
+
+  watchEffect(() => {
+    if (currentInfoObj.value === 'cafe') {
+      arrowPlacement.value = 8.1
+    }
+    if (currentInfoObj.value === 'vandrarhem') {
+      arrowPlacement.value = 34
+    }
+    if (currentInfoObj.value === 'event') {
+      arrowPlacement.value = 59.8
+    }
+    if (currentInfoObj.value === 'gudstjänster') {
+      arrowPlacement.value = 87.1
+    }
+  })
 </script>
 
 <style lang="scss">
@@ -63,5 +84,14 @@
   }
   .info-text__line-animation {
     margin: 8rem 0;
+    position: relative;
+    .line-green__arrow {
+      position: absolute;
+      top: -3.2rem;
+      left: 87%;
+      height: 5.5rem;
+      width: 8rem;
+      transition: all 0.5s;
+    }
   }
 </style>
