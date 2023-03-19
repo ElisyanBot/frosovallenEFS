@@ -10,15 +10,27 @@
         <TableCategory
           font-awesome-class="bowl-rice"
           text="varm mat"
+          :selected="selectedCategory === 'warm'"
           @handle-click="showWarmFood"
         />
         <TableCategory
           font-awesome-class="bowl-food"
           text="kall mat"
+          :selected="selectedCategory === 'cold'"
           @handle-click="showColdFood"
         />
-        <TableCategory font-awesome-class="ice-cream" text="fika" @handle-click="showDesserts" />
-        <TableCategory font-awesome-class="mug-hot" text="dryck" @handle-click="showDrinks" />
+        <TableCategory
+          font-awesome-class="ice-cream"
+          text="fika"
+          :selected="selectedCategory === 'dessert'"
+          @handle-click="showDesserts"
+        />
+        <TableCategory
+          font-awesome-class="mug-hot"
+          text="dryck"
+          :selected="selectedCategory === 'drinks'"
+          @handle-click="showDrinks"
+        />
       </div>
     </MainWidthLayout>
     <MainWidthLayout>
@@ -58,6 +70,7 @@
   const expandedSection = ref(false)
   const btnTxt = ref('visa mer')
   const foodItems = ref(warmFood)
+  const selectedCategory = ref('warm')
 
   watchEffect(() => {
     rowsNr.value = Math.ceil(foodItems.value.length / 2)
@@ -75,18 +88,22 @@
 
   const showWarmFood = () => {
     foodItems.value = warmFood
+    selectedCategory.value = 'warm'
   }
 
   const showColdFood = () => {
     foodItems.value = coldFood
+    selectedCategory.value = 'cold'
   }
 
   const showDesserts = () => {
     foodItems.value = desserts
+    selectedCategory.value = 'dessert'
   }
 
   const showDrinks = () => {
     foodItems.value = drinks
+    selectedCategory.value = 'drinks'
   }
 </script>
 

@@ -1,5 +1,8 @@
 <template>
-  <div @click="handleClick" class="food-table__category">
+  <div
+    @click="handleClick"
+    :class="{ 'food-table__category': true, 'food-table__category--selected': selected }"
+  >
     <FontAwesomeIcon :icon="['fas', fontAwesomeClass]" />
     <h4>{{ text }}</h4>
   </div>
@@ -16,6 +19,10 @@
     fontAwesomeClass: {
       type: String,
       required: false
+    },
+    selected: {
+      type: Boolean,
+      default: false
     }
   })
 
