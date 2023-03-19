@@ -25,7 +25,9 @@
         @handle-click="() => (currentInfoObj = 'gudstjänster')"
       />
     </div>
-
+    <div class="info-text__line-animation">
+      <img src="/line-green.svg" alt="animation" />
+    </div>
     <InfoTextLayout>
       <InfoText
         v-for="(item, i) in mockData[currentInfoObj]"
@@ -54,5 +56,8 @@
   .icon__container {
     display: flex;
     justify-content: space-between;
+  }
+  .info-text__line-animation {
+    margin: 8rem 0;
   }
 </style>

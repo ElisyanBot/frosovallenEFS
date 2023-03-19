@@ -1,6 +1,6 @@
 <template>
   <div @click="handleClick" class="food-table__category">
-    <i :class="fontAwesomeClass"></i>
+    <FontAwesomeIcon :icon="['fas', fontAwesomeClass]" />
     <h4>{{ text }}</h4>
   </div>
 </template>
@@ -33,6 +33,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2.5rem;
     width: 100%;
     max-width: 24.2rem;
     height: 21.5rem;
@@ -41,18 +42,22 @@
     filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.25));
     &:hover {
       cursor: pointer;
+      h4 {
+        text-decoration: underline;
+      }
     }
     h4 {
       font-size: 2.2rem;
       text-transform: uppercase;
       font-weight: bold;
     }
-    i {
-      font-size: 2.2rem;
+    svg {
+      width: 15rem;
+      height: 8.5rem;
     }
   }
   .food-table__category--selected {
-    i {
+    svg {
       color: #f37563;
     }
   }

@@ -7,10 +7,18 @@
     </picture>
     <MainWidthLayout>
       <div class="food-table__categories">
-        <TableCategory text="varm mat" @handle-click="showWarmFood" />
-        <TableCategory text="kall mat" @handle-click="showColdFood" />
-        <TableCategory text="fika" @handle-click="showDesserts" />
-        <TableCategory text="dryck" @handle-click="showDrinks" />
+        <TableCategory
+          font-awesome-class="bowl-rice"
+          text="varm mat"
+          @handle-click="showWarmFood"
+        />
+        <TableCategory
+          font-awesome-class="bowl-food"
+          text="kall mat"
+          @handle-click="showColdFood"
+        />
+        <TableCategory font-awesome-class="ice-cream" text="fika" @handle-click="showDesserts" />
+        <TableCategory font-awesome-class="mug-hot" text="dryck" @handle-click="showDrinks" />
       </div>
     </MainWidthLayout>
     <MainWidthLayout>
@@ -118,7 +126,7 @@
       content: ' ';
       overflow: hidden;
       padding-bottom: 1rem;
-      border-right: 3px dashed #f8f8f8da;
+      border-right: 2px dashed #f8f8f8da;
 
       justify-self: center;
       grid-column-start: span divider;
