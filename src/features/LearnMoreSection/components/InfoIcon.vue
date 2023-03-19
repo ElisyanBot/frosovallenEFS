@@ -1,9 +1,9 @@
 <template>
-  <div @click="handleClick" class="info-icon__container">
+  <div @click="handleClick" class="info-icon">
     <div class="info-icon__background">
       <img :src="bgSrc" alt="info-icon icon background" />
       <div>
-        <i :class="iconClass"></i>
+        <FontAwesomeIcon class="test" :icon="['fas', iconClass]" />
       </div>
     </div>
     <div class="info-icon__text">
@@ -15,6 +15,7 @@
 </template>
 
 <script setup>
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
   import { defineProps, defineEmits } from 'vue'
 
   defineProps({
@@ -40,7 +41,7 @@
 </script>
 
 <style lang="scss">
-  .info-icon__container {
+  .info-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,12 +62,19 @@
       position: absolute;
       background-color: #7d9a89;
       border-radius: 5px;
-      width: 24rem;
-      height: 24rem;
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: inherit;
+        height: 9rem;
+        color: #1c4e46;
+      }
 
-      i {
-        position: absolute;
-        content: 'test 2';
+      .test {
+        filter: drop-shadow(0px 0px 8px 10px #092420);
       }
     }
   }

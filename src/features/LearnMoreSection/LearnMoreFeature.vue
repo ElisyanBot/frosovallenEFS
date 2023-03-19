@@ -4,24 +4,28 @@
       <InfoIcon
         bg-src="./FrosovallenHus.png"
         text="cafe"
+        icon-class="church"
         @handle-click="() => (currentInfoObj = 'cafe')"
       />
 
       <InfoIcon
         bg-src="./FrosovallenHus.png"
         text="vandrarhem"
+        icon-class="church"
         @handle-click="() => (currentInfoObj = 'vandrarhem')"
       />
 
       <InfoIcon
         bg-src="./FrosovallenHus.png"
         text="event"
+        icon-class="church"
         @handle-click="() => (currentInfoObj = 'event')"
       />
 
       <InfoIcon
         bg-src="./FrosovallenHus.png"
         text="gudstjänst"
+        icon-class="church"
         @handle-click="() => (currentInfoObj = 'gudstjänster')"
       />
     </div>
