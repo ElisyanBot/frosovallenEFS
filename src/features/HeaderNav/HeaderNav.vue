@@ -1,4 +1,7 @@
 <template>
+  <picture class="main-header__img">
+    <img src="/main-header__img.png" alt="" />
+  </picture>
   <MainWidthLayout>
     <header class="header-nav">
       <ul class="header-nav__desktop-menu-row">
@@ -21,6 +24,18 @@
 </script>
 
 <style lang="scss">
+  .main-header__img {
+    background-color: #040410;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80rem;
+    img {
+      width: 192.5rem;
+      height: 80rem;
+      object-fit: fill;
+    }
+  }
   .header-nav {
     display: flex;
     justify-content: space-between;
