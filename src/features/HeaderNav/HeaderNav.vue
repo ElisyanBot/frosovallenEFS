@@ -2,22 +2,22 @@
   <MainWidthLayout>
     <header class="header-nav">
       <ul class="header-nav__desktop-menu-row">
-        <NavItem text="first"/>
-        <NavItem text="second"/>
+        <NavItem text="first" />
+        <NavItem text="second" />
       </ul>
-      <div class="header-nav__logo"> logo </div>
+      <div class="header-nav__logo">logo</div>
       <ul class="header-nav__desktop-menu-row">
-        <NavLinkIem text="third" a-link="https://facebook.com"/>
-        <NavLinkIem text="fourth" a-link="https://facebook.com"/>
+        <NavLinkIem text="third" a-link="https://facebook.com" />
+        <NavLinkIem text="fourth" a-link="https://facebook.com" />
       </ul>
     </header>
   </MainWidthLayout>
 </template>
 
 <script setup>
-  import MainWidthLayout from '../../layouts/MainWidthLayout.vue';
-  import NavItem from './components/NavItem.vue';
-  import NavLinkIem from './components/NavLinkIem.vue';
+  import MainWidthLayout from '../../layouts/MainWidthLayout.vue'
+  import NavItem from './components/NavItem.vue'
+  import NavLinkIem from './components/NavLinkIem.vue'
 </script>
 
 <style lang="scss">
@@ -51,7 +51,7 @@
     justify-content: center;
     width: 22rem;
     height: 5rem;
-    list-style: none; 
+    list-style: none;
     margin: 5rem 0;
     font-size: 2.4rem;
     font-weight: bold;

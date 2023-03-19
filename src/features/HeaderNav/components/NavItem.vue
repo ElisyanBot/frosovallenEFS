@@ -5,11 +5,11 @@
 </template>
 
 <script setup>
-    defineProps({
-      text: {
-        type: String,
-        required: true,
-      }
-    })
-    defineEmits(['handleClick'])
+  defineProps({
+    text: {
+      type: String,
+      required: true
+    }
+  })
+  defineEmits(['handleClick'])
 </script>

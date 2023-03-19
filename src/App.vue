@@ -12,7 +12,7 @@
   import LearnMoreFeature from './features/LearnMoreSection/LearnMoreFeature.vue'
   import FoodTable from './features/FoodTable/FoodTable.vue'
   import AboutUs from './components/AboutUs.vue'
-  import HeaderNav from './features/HeaderNav/HeaderNav.vue';
+  import HeaderNav from './features/HeaderNav/HeaderNav.vue'
 </script>
 
 <style lang="scss">

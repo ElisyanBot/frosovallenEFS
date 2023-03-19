@@ -8,11 +8,11 @@
   defineProps({
     text: {
       type: String,
-      required: true,
+      required: true
     },
     aLink: {
       type: String,
-      required: true,
+      required: true
     }
   })
 </script>
