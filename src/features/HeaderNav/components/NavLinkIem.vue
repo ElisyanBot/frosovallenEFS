@@ -1,6 +1,6 @@
 <template>
   <li class="header-nav-item header-nav-item__link">
-    <a :href="aLink">{{ text }}</a>
+    <a target="_blank" :href="aLink">{{ text }}</a>
     <FontAwesomeIcon icon="arrow-up-right-from-square" />
   </li>
 </template>
