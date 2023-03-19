@@ -1,6 +1,6 @@
 <template>
   <li class="header-nav-item" @click="handleClick">
-    {{ text }}
+    <a :href="goTo"> {{ text }} </a>
   </li>
 </template>
 
@@ -9,6 +9,9 @@
     text: {
       type: String,
       required: true
+    },
+    goTo: {
+      type: String
     }
   })
   defineEmits(['handleClick'])

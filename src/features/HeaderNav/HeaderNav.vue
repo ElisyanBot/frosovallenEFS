@@ -5,13 +5,13 @@
   <MainWidthLayout>
     <header class="header-nav">
       <ul class="header-nav__desktop-menu-row">
-        <NavItem text="first" />
-        <NavItem text="second" />
+        <NavItem text="cafe" go-to="#cafe" />
+        <NavItem text="meny" go-to="#meny" />
       </ul>
       <div class="header-nav__logo">logo</div>
       <ul class="header-nav__desktop-menu-row">
-        <NavLinkIem text="third" a-link="https://facebook.com" />
-        <NavLinkIem text="fourth" a-link="https://facebook.com" />
+        <NavLinkIem text="evenemang" a-link="https://facebook.com" />
+        <NavLinkIem text="hitta hit" a-link="https://facebook.com" />
       </ul>
     </header>
   </MainWidthLayout>
@@ -71,6 +71,18 @@
     font-size: 2.4rem;
     font-weight: bold;
     text-transform: uppercase;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 
   .header-nav__desktop-menu-row {

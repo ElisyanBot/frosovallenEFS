@@ -9,10 +9,21 @@ import {
   faIceCream,
   faMugHot,
   faBowlFood,
-  faBowlRice
+  faBowlRice,
+  faArrowUpRightFromSquare
 } from '@fortawesome/free-solid-svg-icons'
 import './assets/main.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faUtensils, faCalendar, faChurch, faHouse, faIceCream, faMugHot, faBowlFood, faBowlRice)
+library.add(
+  faArrowUpRightFromSquare,
+  faUtensils,
+  faCalendar,
+  faChurch,
+  faHouse,
+  faIceCream,
+  faMugHot,
+  faBowlFood,
+  faBowlRice
+)
 createApp(App).component('FontAwesomeIcon', FontAwesomeIcon).mount('#app')
